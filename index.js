@@ -6,6 +6,8 @@ var app = express();
 // attempting to define db START
 var db = require("./models");
 // attempting to define db END
+app.use(express.static(__dirname + '/static'));
+
 
 
 app.use(require('morgan')('dev'));

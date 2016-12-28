@@ -24,16 +24,6 @@ app.get('/', function(req, res) {
   });
 });
 
-//START POKEMONS
-app.get("/pokemon", function(req,res){
-  db.pokemon.findAll().then(function(bar) {
-      res.render("pokemon", {"foo": bar});
-  });
-});
-//END POKEMONS
-
-
-
 
 app.use('/pokemon', require('./routes/pokemon'));
 
